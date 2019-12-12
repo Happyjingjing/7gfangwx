@@ -1,0 +1,4 @@
+<!--pages/xiangce/xiangce.wxml-->
+  
+  <tem-xiangce xiangceList="{{xiangceList}}" idx="{{idx}}" />
+ 

@@ -1,0 +1,18 @@
+<!--components/search/search.wxml-->
+  <view class="search">
+    <view class="searchbox {{isseplace ? 'isseplace':''}}">
+      <view class="place">
+        <text>廊坊</text>
+      </view>
+      <view class="searchbd">
+        <view class="sespan">
+          <image src="../../images/searchico.png" mode="widthFix" class="searchico" />
+        </view>
+        <input
+          type="text"
+          placeholder="搜索楼盘名称"
+          class="searchinp"
+        />
+      </view>
+    </view>
+  </view>

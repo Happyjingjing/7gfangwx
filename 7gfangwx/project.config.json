@@ -31,13 +31,101 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 11,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/newhouse/newhouse",
+					"pathName": "pages/newhouse/newhouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/news",
+					"pathName": "pages/news/news",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/newsinfo/newsinfo",
+					"pathName": "pages/newsinfo/newsinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/newsinfo/newsinfo",
+					"pathName": "pages/newsinfo/newsinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/group/group",
+					"pathName": "pages/group/group",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/groupinfo/groupinfo",
+					"pathName": "pages/groupinfo/groupinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/activitys/activitys",
+					"pathName": "pages/activitys/activitys",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/activityinfo/activityinfo",
+					"pathName": "pages/activityinfo/activityinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/video/video",
+					"pathName": "pages/video/video",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/newhouseinfo/newhouseinfo",
+					"pathName": "pages/newhouseinfo/newhouseinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiangce/xiangce",
+					"pathName": "pages/xiangce/xiangce",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pingluntap/pingluntap",
+					"pathName": "pages/pingluntap/pingluntap",
+					"scene": null
+				}
+			]
 		}
 	}
 }

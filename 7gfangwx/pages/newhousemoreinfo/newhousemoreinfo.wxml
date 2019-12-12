@@ -1,0 +1,35 @@
+<!--pages/newhousemoreinfo/newhousemoreinfo.wxml-->
+<div class="housemoreinfo">
+    <menulist :ismenutop="false" />
+    <div class="jibeninfo">
+      <h2 class="titleh2">基本信息</h2>
+      <p>
+        价 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：
+        <span>{{ loupaninfo.price }}</span>
+      </p>
+      <p>物业类型：{{ loupaninfo.cp_titcle }}</p>
+      <p>
+        项目特色：
+        <span v-for="(item, index) in loupaninfo.title_liked" :key="index"
+          >{{ item.title
+          }}{{ index == loupaninfo.title_liked.length - 1 ? "" : "，" }}
+        </span>
+      </p>
+      <p>装修状况：{{ loupaninfo.renovation_status_val }}</p>
+      <p>产权年限：{{ loupaninfo.property_right_val }}</p>
+      <p>开 发 商&nbsp;&nbsp;：{{ loupaninfo.developers }}</p>
+      <p>楼盘地址：{{ loupaninfo.address }}</p>
+    </div>
+    <div class="infobox">
+      <h2 class="titleh2">交通信息</h2>
+      <div v-html="loupaninfo.transport_line"></div>
+    </div>
+    <div class="infobox">
+      <h2 class="titleh2">周边配套</h2>
+      <div v-html="loupaninfo.lppeitao"></div>
+    </div>
+    <div class="infobox" v-if="loupaninfo.excerpt">
+      <h2 class="titleh2">项目简介</h2>
+      <div v-html="loupaninfo.excerpt"></div>
+    </div>
+  </div>

@@ -1,0 +1,50 @@
+<!--pages/newsinfo/newsinfo.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+  <view class="newsinfo">
+    <view class="article">
+      <view class="titleh2">{{ newsinfo.post_title }}</view>
+      <view class="txtinfo">
+        <text>作者：{{ newsinfo.user_nickname }}</text>
+        {{ newsinfo.published_time }}
+      </view>
+      <view class="articlebd">
+        <template is="wxParse" data="{{wxParseData:post_content.nodes}}"/>
+        <view class="zanbox clearfix">
+          <!-- <i class="zanico"
+             :class="zanon == 1 ? 'zanico-on' : ''"
+             @click="zanbtn"></i> -->
+        </view>
+      </view>
+    </view>
+    <view class="tjread">
+      <view class="titleh2">相关资讯</view>
+      <view class="zxborder" wx:for="{{newslist}}" wx:key="item.n_id">      
+        <tem-zxthreepic wx:if="{{item.img_num == 3}}"
+            title="{{item.post_title}}"
+            username="{{item.user_nickname}}"
+            datetime="{{item.published_time}}"
+            imgArr="{{item.img_path}}"
+            nid="{{item.n_id}}"
+            nowurl="{{nowurl}}" />
+        <tem-zxtxtpic wx:if="{{item.img_num == 1}}"
+            title="{{item.post_title}}"
+            username="{{item.user_nickname}}"
+            datetime="{{item.published_time}}"
+            imgArr="{{item.img_path}}"
+            nid="{{item.n_id}}"
+            nowurl="{{nowurl}}" />
+
+        <tem-zxtxt wx:if="{{item.img_num == 0}}"
+            title="{{item.post_title}}"
+            username="{{item.user_nickname}}"
+            datetime="{{item.published_time}}"
+            nid="{{item.n_id}}"
+            nowurl="{{nowurl}}" />
+      </view>
+    </view>
+    <!-- <view class="pinglun">
+      <view class="titleh2">用户点评</view>
+      <tem-pinglunlist commentlist="{{commentlist}}" />
+      
+    </view> -->
+  </view>

@@ -1,0 +1,103 @@
+.video {
+  position: relative;
+  background: #f8f8f8;
+  padding: 15rpx;
+  
+  .videolist {
+    position: relative;
+    width: 100%;
+    .vidul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .vidli {
+        width: 355rpx;
+        margin-bottom: 10rpx;
+        border-radius: 5rpx;
+        overflow: hidden;
+        .picbox {
+          position: relative;
+          width: 100%;
+          height: 385rpx;
+          overflow: hidden;
+          .vidimg {
+            width: 100%;
+            height: 100%;
+          }
+          .bomtxt {
+            position: absolute;
+            width: 100%;
+            height: 40rpx;
+            line-height: 40rpx;
+            background: rgba(0, 0, 0, 0.5);
+            font-size: 24rpx;
+            color: #fff;
+            text-indent: 20rpx;
+          }
+        }
+        .bombox {
+          position: relative;
+          width: 100%;
+          height: 60rpx;
+          background: #fff;
+          display: flex;
+          justify-content: space-between;
+          .lef {
+            width: 160rpx;
+            height: 60rpx;
+            overflow: hidden;
+            margin-left: 30rpx;
+            display: flex;
+            flex-direction: row;
+            .vidimg {
+              display: block;
+              width: 50rpx;
+              height: 50rpx;
+              margin-top: 6rpx;
+              border-radius: 50%;
+            }
+            .vidspan {
+              font-size: 24rpx;
+              color: #6a6a6a;
+              line-height: 60rpx;
+              margin-left: 20rpx;
+            }
+          }
+          .rig {
+            .rigimg{
+              width: 24rpx;
+              height: 16rpx;
+            }
+            // padding-left: 34rpx;
+            // background: url(../assets/img/seeico.png) no-repeat left center;
+            // background-size: 24rpx 16rpx;
+            font-size: 24rpx;
+            color: #6a6a6a;
+            line-height: 60rpx;
+            margin-right: 20rpx;
+          }
+        }
+      }
+      .vidli:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+  .morelp {
+    font-size: 24rpx;
+    line-height: 80rpx;
+    color: #808080;
+    text-align: center;
+  }
+  // .startico {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   width: 100rpx;
+  //   height: 100rpx;
+  //   margin: -50rpx 0 0 -50rpx;
+  //   background: url(../assets/img/video-start.png) no-repeat center;
+  //   background-size: 100% 100%;
+  // }
+  
+}

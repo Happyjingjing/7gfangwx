@@ -1,0 +1,28 @@
+<!--components/tuijianlp/tuijianlp.wxml-->
+  <view class="tuijianlp">
+        <!-- to="{
+          name: 'newhouseinfo',
+          params: { nowurl: nowurl, lid: item.l_id }
+        }" -->
+      <view class="lpli" bindtap="lpinfo"        
+        wx:for="{{tuijlpList}}"
+        wx:key="{{item.l_id}}"
+        data-lid="{{item.l_id}}" >
+        <view class="lef">
+          <image src="{{item.img_path}}" mode="" alt="" class="lpimg" />
+        </view>
+        <view class="rig">
+          <view class="lpname">{{ item.title }}</view>
+          <view class="price">{{ item.price }}元/m²</view>
+          <view class="hui place">{{ item.name }}</view>
+          <view class="tag">
+            <text class="lpspan red">{{ item.sales_status }}</text>
+            <text class="lpspan tagico"
+                  wx:for="{{item.category_like_val}}"
+                  wx:for-item="t"
+                  wx:key="key"
+            >{{ t.title }}</text>
+          </view>
+        </view>
+      </view>
+  </view>

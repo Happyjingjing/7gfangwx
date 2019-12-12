@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "navigationBar": "/components/navigationBar/navigationBar"
+  },
+  "navigationBarTitleText": "视频详情",
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom"
+}

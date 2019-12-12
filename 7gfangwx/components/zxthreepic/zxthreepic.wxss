@@ -1,0 +1,27 @@
+.zxthreepic {
+  position: relative;
+  width: 100%;
+  padding: 20rpx 0 10rpx;
+}
+.zxthreepic .title {
+  display: block;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: #000;
+  margin-bottom: 0.1rem;
+}
+.zxthreepic .threepic {
+  display: flex;
+  justify-content: space-between;
+}
+.zxthreepic .threepic .zxpic {
+  width: 225rpx;
+  height: 150rpx;
+}
+.zxthreepic .ltime {
+  font-size: 24rpx;
+  color: #8c8c8c;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+}

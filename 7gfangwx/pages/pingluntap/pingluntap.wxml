@@ -1,0 +1,25 @@
+<!--pages/pingluntap/pingluntap.wxml-->
+
+<view class="pingluntap">
+  <view class="pinglunbox">
+    <textarea class="textarea" placeholder="对本楼盘的环境、位置、配套设置满意吗？说说你的看法" maxlength="200" bindinput="inputnum" />
+    <view class="maxtext">0/200字</view>
+    <view class="pingpicbox">
+      <view class="imgbox" wx:if="{{}}">
+        <image mode="aspectFit" src="{{}}" class="pingimg" />
+      </view>
+      <view class="imgbox">
+        <image mode="aspectFit" src="../../images/upimg.png" class="pingimg" bindtap="updataimg" />
+      </view>
+    </view>
+  </view>
+  <view class="pingbom">
+    <view class="niming">
+      <text class="nimtext">匿名点评</text>
+      <text class="nimingquan" wx:if="{{niming}}" bindtap="nimingtap"></text>
+      <image mode="widthFix" wx:else class="nimingimg" bindtap="nimingtap" src="../../images/pingdui.png" />
+    </view>
+    <view class="fabiaotap" bindtap="fabiaotap">发表</view>
+  </view>
+</view>
+

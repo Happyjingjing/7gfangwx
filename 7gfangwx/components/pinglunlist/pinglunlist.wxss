@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+.container .dianpbd {
+  position: relative;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.container .dianpbd .wxul {
+  padding-bottom: 40rpx;
+}
+.container .dianpbd .wxul .wxli {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+.container .dianpbd .wxul .wxli .litop {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36rpx;
+}
+.container .dianpbd .wxul .wxli .litop .tx {
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 10rpx;
+  border-radius: 50%;
+}
+.container .dianpbd .wxul .wxli .litop .rigbox {
+  width: 580rpx;
+  font-size: 28rpx;
+  line-height: 46rpx;
+  color: #000;
+}
+.container .dianpbd .wxul .wxli .litop .rigbox .nametime {
+  line-height: 38rpx;
+}
+.container .dianpbd .wxul .wxli .pingtxt {
+  font-size: 32rpx;
+  color: #353535;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+  margin-bottom: 50rpx;
+}
+.container .dianpbd .wxul .wxli .pingimg {
+  display: block;
+  width: 100%;
+}
+.container .dianpbd .wxul .wxli:nth-last-child(1) {
+  border-bottom: 0;
+}

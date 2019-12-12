@@ -1,0 +1,66 @@
+@red: #ff2b0a;
+@blue: #1fa2ff;
+.tuijianlp {
+  position: relative;
+  width: 100%;
+    .lpli {
+      width: 100%;
+      padding: 20rpx 0;
+      border-bottom: 1px solid #f8f8f8;
+      display: flex;
+      justify-content: space-between;
+      .lef {
+        width: 240rpx;
+        height: 160rpx;
+        .lpimg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .rig {
+        width: 420rpx;
+        .lpname {
+          font-size: 32rpx;
+          color: #000;
+          line-height: 46rpx;
+        }
+        .hui {
+          color: #999;
+          line-height: 46rpx;
+        }
+        .price {
+          font-size: 34rpx;
+          line-height: 46rpx;
+          color: @red;
+        }
+        .place {
+          font-size: 24rpx;
+        }
+        .tag {
+          // overflow: hidden;
+          height: 30rpx;
+          display: flex;
+          flex-direction: row;
+          .lpspan {            
+            display: block;
+            font-size: 20rpx;
+            color: #333;
+            height: 30rpx;
+            line-height: 30rpx;
+            padding: 0 10rpx;
+            margin-right: 16rpx;
+          }
+          .red {
+            color: #fff;
+            background: @blue;
+          }
+          .tagico {
+            background: #ededed;
+          }
+        }
+      }
+    }
+    .lpli:nth-last-child(1){
+      border-bottom:0;
+    }
+}

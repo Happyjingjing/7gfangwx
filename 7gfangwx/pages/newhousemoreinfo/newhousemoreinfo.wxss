@@ -1,0 +1,40 @@
+.housemoreinfo {
+  position: relative;
+  padding: 0.1rem 0.3rem 0.5rem;
+  font-size: 0.24rem;
+  line-height: 0.5rem;
+  color: #333;
+}
+.housemoreinfo .titleh2 {
+  font-size: 0.36rem;
+  line-height: 0.6rem;
+  margin-top: 0.2rem;
+  font-weight: normal;
+}
+.housemoreinfo .jibeninfo {
+  position: relative;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+.housemoreinfo .jibeninfo p {
+  color: #666;
+  font-size: 0.24rem !important;
+}
+.housemoreinfo .jibeninfo span {
+  font-size: 0.24rem !important;
+}
+.housemoreinfo .infobox {
+  position: relative;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+.housemoreinfo .infobox:nth-last-child(1) {
+  border-bottom: 0;
+}
+.housemoreinfo p {
+  color: #666;
+  font-size: 0.24rem !important;
+}
+.housemoreinfo span {
+  font-size: 0.24rem !important;
+}

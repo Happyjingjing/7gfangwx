@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tem-xiangce": "/components/xiangce/xiangce",
+    "tem-pinglunlist": "/components/pinglunlist/pinglunlist",
+    "tem-tuijianlp": "/components/tuijianlp/tuijianlp",
+    "tem-lpdongtai": "/components/lpdongtai/lpdongtai",
+    "tem-baomingtan": "/components/baomingtan/baomingtan"
+  }
+}

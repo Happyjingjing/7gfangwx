@@ -1,0 +1,52 @@
+<!--pages/activityinfo/activityinfo.wxml-->
+<view class="groupinfo">
+    <view class="toppic">
+      <image class="groimg" mode="widthFix" src="{{groupinfo.banner}}" alt="" />
+      <view class="grop">{{ groupinfo.title }}</view>
+    </view>
+
+    <view class="txtbox">
+      <view class="groh2">活动说明:</view>
+      <view class="grop">
+        报名人数：
+        <text class="grospan">{{ groupinfo.already_sign_up }}人已报名</text>
+      </view>
+      <view class="grop">报名时间：<text class="grospan">{{ groupinfo.start_time }}-{{ groupinfo.end_time }}</text></view>
+      <view class="grop red" wx:if="{{}}">专属优惠：<text class="grospan">{{ }}</text></view>
+      <view class="grop red" wx:else>专属优惠：待定</view>
+      <view class="grop">看房热线：<text class="grospan">{{ groupinfo.mobile }}</text></view>
+      <view class="groh2">看房行程<text class="small">(以当天实际时间为准)</text></view>
+    </view>
+
+    <view class="xingcheng">
+      <view class="xchtxt">
+        <image class="placeico" mode="widthFix" src="../../images/tuanplaceico.png" alt="" />
+        <!-- <text class="placeico"></text> -->
+        {{ groupinfo.set_address }}
+      </view>
+      <view class="xchtxt">
+        <image class="timeico" mode="widthFix" src="../../images/tuantimeico.png" alt="" />
+        <!-- <text class="timeico"></text> -->
+        {{ groupinfo.activity_time }}
+      </view>
+      <view class="groupul">
+        <view class="groupli" data-lid="{{item.l_id}}" wx:for="{{groupinfo.loupaninfo}}"
+          wx:key="{{item.l_id}}">
+          <text class="redcli"></text>
+          <view class="tuandiv">
+            <view class="img"><image class="groimg" mode="widthFix" src="{{item.img_path}}" alt="" /></view>
+            <view class="bomtxtbox">
+              <view class="title">{{ item.title }}</view>
+              <view class="price">
+                <text class="red">{{ item.price }}</text>元/m²
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="lijibm" bindtap="lijibm">立即报名</view>
+    
+    <tem-baomingtan title="{{title}}" isinfotan="{{isinfotan}}" bind:infotan="infotan" />
+  </view>

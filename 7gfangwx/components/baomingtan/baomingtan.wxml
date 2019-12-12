@@ -1,0 +1,36 @@
+<!--components/baomingtan/baomingtan.wxml-->
+    <view class="infoboxtan" wx:if="{{isinfotan}}">
+      <view class="tanmain">
+        <image src="../../images/close-xx.png" mode="widthFix" class="close" bindtap="closeinfo" />
+        <view class="titlebox">
+          {{title}}
+          <text class="grospan">我们将为您保密个人信息</text>
+        </view>
+        <view class="formbox">
+          <input
+            type="text"
+            name="username"
+            class="txt"
+            placeholder="您的姓名"
+            bindtap="username"
+          />
+          <input
+            placeholder="您的电话"
+            name="mobile"
+            class="txt"
+            type="text"
+            bindtap="telval"
+          />
+          <view class="agree clearfix">
+            <text class="duiico" bindtap="isoncli" wx:if="{{!ison}}"></text>
+            <image src="../../images/duiico.png" bindtap="isoncli" wx:else class="duiicon" mode="widthFix" />
+            <text class="grospan" bindtap="isoncli">我已阅读并同意</text>
+            <text class="groa" bindtap="xieyi">《喜欢房服务协议》</text>
+          </view>
+          <view
+            class="yuyuetab"
+            bindtap="dingyuebtn"
+          >立即订阅</view>
+        </view>
+      </view>
+    </view>

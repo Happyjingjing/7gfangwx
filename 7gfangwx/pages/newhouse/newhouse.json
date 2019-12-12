@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tem-search": "/components/search/search",
+    "tem-tuijianlp": "/components/tuijianlp/tuijianlp"
+  },
+  "navigationBarTitleText": "新房"
+}

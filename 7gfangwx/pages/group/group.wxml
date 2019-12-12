@@ -1,0 +1,21 @@
+<!--pages/group/group.wxml-->
+  <view class="group">
+    <view class="groupul">
+      <view class="groupli" wx:for="{{groupList}}" wx:key="index"  bindtap="groupinfo" data-id="{{item.id}}" >
+        <view class="img" >
+          <image src="{{item.image_path}}" alt="" mode="widthFix" class="groimg" />
+        </view>
+        <view class="bombox">
+          <view class="lptit">
+            <view class="lptitxt">{{ item.gtitle }}</view>
+            <image src="../../images/tuanicon.png" mode="widthFix" class="tuanicon" />
+          </view>
+          <view class="baoming baop">已有{{ item.group_people_num }}人报名</view>
+          <view class="baomtime baop">
+            报名时间：{{ item.start_time }} - {{ item.end_time }}
+          </view>          
+        </view>
+      </view>
+    </view>
+    
+  </view>

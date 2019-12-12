@@ -1,0 +1,10 @@
+<!--components/zxtxt/zxtxt.wxml-->
+  <view class="zxborder zxtxt" bindtap="newsinfo">
+    <view class="txtbox">
+      <text class="title">{{ title }}</text>
+      <view class="ltime">
+        <text>{{ username }}</text>
+        <text>{{ datetime }}</text>
+      </view>
+    </view>
+  </view>

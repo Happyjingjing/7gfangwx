@@ -1,0 +1,93 @@
+.groupinfo {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100rpx;
+}
+.groupinfo .toppic {
+  position: relative;
+  width: 100%;
+  height: 530rpx;
+  overflow: hidden;
+}
+.groupinfo .toppic .groimg {
+  width: 100%;
+  height: 100%;
+}
+.groupinfo .toppic .grop {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60rpx;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 60rpx;
+  text-indent: 35rpx;
+}
+.groupinfo .txtbox {
+  position: relative;
+  padding: 0 40rpx;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+.groupinfo .txtbox .groh2 {
+  font-size: 36rpx;
+  color: #333;
+  line-height: 60rpx;
+}
+.groupinfo .txtbox .grop {
+  font-size: 28rpx;
+  line-height: 66rpx;
+  border-bottom: 1px solid #eee;
+  color: #888;
+}
+.groupinfo .txtbox .red {
+  color: #ff222c;
+}
+.groupinfo .txtbox .grospan {
+  color: #353535;
+}
+.groupinfo .txtjieshao {
+  position: relative;
+  padding: 0 40rpx;
+  margin-bottom: 30rpx;
+}
+.groupinfo .txtjieshao .groh2 {
+  font-size: 36rpx;
+  color: #000;
+  line-height: 60rpx;
+}
+.groupinfo .txtjieshao .wxParse-p {
+  font-size: 28rpx;
+  line-height: 54rpx;
+  color: #333;
+  text-align: justify;
+}
+.groupinfo .txtjieshao .wxParse-p .wxParse-img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.groupinfo .txtjieshao .grop {
+  font-size: 28rpx;
+  line-height: 60rpx;
+  color: #888;
+  text-align: justify;
+}
+.groupinfo .txtjieshao .grop .grospan {
+  color: #333;
+  margin-right: 10rpx;
+}
+.groupinfo .lijibm {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85rpx;
+  background: #ff222c;
+  line-height: 85rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+}

@@ -1,0 +1,170 @@
+<!--pages/newhouseinfo/newhouseinfo.wxml-->
+<wxs src="../../utils/filter.wxs" module="filter" />
+
+<view class="newhouseinfo">
+  <view class="picbox" bindtap="picxiangce" data-id="0">
+    <image class="wximg" src="{{info.img_path}}" alt="" />
+    <view class="tabbom">
+      <text class="tapspan {{}}">视频</text>
+      <text class="tapspan on">图片</text>
+      <view class="tapspan tapnum">共{{xiangce.length}}张</view>
+    </view>
+  </view>
+  <view class="housebox">
+    <view class="houseinfo">
+      <view class="wxh1">{{ info.title }}</view>
+      <view class="wxp tag">
+        <text class="wxspan {{index==0 ? 'tagon' : ''}}"  wx:for="{{likeList}}" wx:key="{{index}}"
+          >{{ item.title }}
+        </text>
+      </view>
+      <view class="txtbox">
+        <view class="wxp price" wx:if="{{info.price}}">
+          均价
+          <view class="spanred"><text class="wxspan red">{{ info.price }} </text>元/m²</view>
+        </view>
+        <view class="wxp price" wx:else>
+          均价
+          <text class="wxspan hui">暂无数据</text>
+        </view>
+        <view class="wxp">
+          开盘
+          <text class="wxspan hui" wx:if="{{info.start_date}}"
+            >{{ info.start_date }}
+          </text>
+          <text class="wxspan hui" wx:else>暂无数据</text>
+        </view>
+        <view class="wxp" wx:if="{{tophuxing.length > 0}}">
+          主推
+          <text
+            class="wxspan hui"
+            wx:for="{{tophuxing}}"
+            wx:key="index"
+            wx:if="{{index==0}}"
+            >{{ filter.replace(item.apartment_shi) }}室{{
+              filter.replace(item.apartment_ting)
+            }}厅{{ filter.replace(item.apartment_wei) }}卫（建筑面积{{
+              item.house_area
+            }}m²）
+          </text>
+        </view>
+        <view class="wxp" wx:else>
+          主推
+          <text class="wxspan hui">暂无数据</text>
+        </view>
+        <view class="wxp" wx:if="{{info.sale_address}}">
+          地址
+          <view class="wxspan hui place">
+            {{ info.sale_address }}
+          </view>
+          <image src="../../images/placeico.png" class="placeico" />
+        </view>
+        <view class="wxp" v-else>
+          地址
+          <text class="wxspan hui">暂无数据</text>
+        </view>
+        <view data-lid="{{lid}}" bindtap="newhousemoreinfo" class="moreinfo">
+          更多信息
+        </view>
+      </view>
+      <view class="tixingbox">
+        <view class="tip" bindtap="tiptan" data-txt="开盘提醒"><image src="../../images/timeico.png" class="timeico" />开盘提醒</view>
+        <!-- <view class="tip">|</view> -->
+        <view class="tip" bindtap="tiptan" data-txt="变价通知"><image src="../../images/priceico.png" class="priceico" />变价通知</view>
+      </view>
+
+      <view class="telbox">
+        <view class="telbg">
+          <view class="lef">
+            <view class="telnum">{{ info.mobile }}</view>
+            <view class="teltxt">致电售楼处了解最新项目情况，领取最新项目资料</view>
+          </view>
+          <image class="wximg" src="../../images/telico.png" alt="" />
+          <a :href="'tel:' + info.mobile"></a>
+        </view>
+      </view>
+
+    </view>
+    
+    <view class="titlebox" wx:if="{{news.length != 0}}">
+      <view class="titleh2" bindtap="lpdongtai">
+        <view class="tittxt">
+          <!-- <i class="line"></i> -->
+          最新动态
+        </view>
+        <view class="morebox">更多动态
+          <image mode="widthFix" class="moreimg" src="../../images/moreimg.png" />
+        </view>
+      </view>
+      <!-- <view class="dongtul">
+        <view class="wxli" data-nid="{{item.id}}" bindtap="newsinfo"
+          wx:for="{{news}}"
+          wx:key="index">
+          <view class="dongtxt">{{ item.post_title }}</view>
+          <text class="pubdate">{{ item.published_time }}</text>
+        </view>
+      </view> -->
+      <tem-lpdongtai news="{{news}}" />
+    </view>
+
+    <view class="huxingbox">
+      <view class="titleh2">
+        <view class="tittxt clearfix">
+          <!-- <i class="line"></i> -->
+          主力户型（{{huxing.length}}）
+        </view>
+      </view>
+      
+      <view class="ulbox">
+        <scroll-view class="huxingbd" scroll-x="{{true}}">
+          <view class="wxli"
+                bindtap="huxinginfo"
+                data-aid="{{item.id}}"
+                wx:for="{{huxing}}"
+                wx:key="{{item.id}}">
+            <view class="imgbox">
+              <image class="wximg" src="{{item.img_path}}" alt="" />
+            </view>
+            <view class="bomtxt">              
+              <view class="shi">
+                {{ filter.replace(item.apartment_shi) }}室{{
+                  filter.replace(item.apartment_ting)
+                }}厅{{ filter.replace(item.apartment_wei) }}卫
+              </view>
+              <view class="mianji">建筑面积{{ item.house_area }}m²</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      
+    </view>
+
+    <view class="dianpingbox">
+      <view class="titleh2" bindtap="pinglun">
+        <view class="tittxt">
+          用户点评
+        </view>
+        <view class="morebox">更多评论
+          <image mode="widthFix" class="moreimg" src="../../images/moreimg.png" />
+        </view>
+      </view>
+      <tem-pinglunlist pinglun="{{pinglun}}" />
+      <view class="pingluntap" bindtap="pingluntap">我要评论</view>
+    </view>
+
+    <view class="dianpingbox">
+      <view class="titleh2">
+        <view class="tittxt">
+          楼盘推荐
+        </view>
+      </view>
+
+      <tem-tuijianlp tuijlpList="{{tuijlpList}}" nowurl="{{nowurl}}" />
+
+    </view>
+
+  </view>
+
+  <tem-baomingtan title="{{title}}" isinfotan="{{isinfotan}}" bind:infotan="infotan" />
+
+</view>

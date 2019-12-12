@@ -1,10 +1,20 @@
 /**app.wxss**/
+
+@import "/wxParse/wxParse.wxss";
 .container {
-  height: 100%;
+  /* height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
+  padding: 200rpx 0; */
   box-sizing: border-box;
-} 
+}
+
+.zxborder {
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.zxborder:nth-last-child(1) {
+  border-bottom: 0;
+}

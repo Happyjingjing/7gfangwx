@@ -1,0 +1,548 @@
+@red: #ff2b0a;
+@blue: #1fa2ff;
+
+.newhouseinfo {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  .picbox {
+    position: relative;
+    width: 100%;
+    height: 480rpx;
+    overflow: hidden;
+    .wximg {
+      width: 100%;
+      height: 100%;
+    }
+    .tabbom{
+      position: absolute;
+      bottom:0;
+      left: 0;
+      width: 100%;
+      height: 50rpx;
+      text-align: center;
+      .tapspan{
+        display: inline-block;
+        height: 36rpx;
+        padding:0 18rpx;
+        font-size: 24rpx;
+        line-height: 36rpx;
+        color: #353535;
+        background:#f7f7f7;
+        border-radius: 30rpx;
+        margin:0 5rpx;
+      }
+      .on{
+        background: @red;
+        color: #fff;
+      }
+      .tapnum{
+        position: absolute;
+        right: 30rpx;
+        top: 0;
+        color: #fff;
+        background: rgba(0,0,0,0.4);
+      }
+    }
+  }
+  .housebox {
+    position: relative;
+    width: 100%;
+    padding-bottom: 80rpx;
+    background: #f8f8f8;
+    .houseinfo {
+      position: relative;
+      width: 100%;
+      padding: 0 30rpx 30rpx;
+      box-sizing:border-box;
+      background: #fff;
+      .wxh1 {
+        font-size: 48rpx;
+        font-weight: bold;
+        line-height: 100rpx;
+      }
+      .tag {
+        .wxspan {
+          display: inline-block;
+          margin-right: 20rpx;
+          padding: 0 10rpx;
+          font-size: 24rpx;
+          color: @red;
+          line-height: 36rpx;
+          background: #f8f8f8;
+        }
+        .tagon{
+          background: #ffe7e8;
+        }
+        padding-bottom: 25rpx;
+        border-bottom: 1px solid #eee;
+      }
+      .txtbox {
+        position: relative;
+        font-size: 28rpx;
+        line-height:60rpx;
+        color: #333;
+        .price {
+          margin-top: 20rpx;
+        }
+        .wxp {
+          display: flex;
+          flex-direction: row;
+          color: #888;
+          .wxspan {
+            margin-left: 30rpx;
+          }
+          .red {
+            color: @red;
+            font-size: 60rpx;
+          }
+          .spanred{
+            color: @red;
+          }
+          .hui {
+            color: #494949;
+          }
+          .place {
+            display: block;
+            max-width: 480rpx;
+            height: 60rpx;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .placeico {
+            display: block;
+            margin-left: 10rpx;
+            width: 28rpx;
+            height: 40rpx;
+            margin-top: 8rpx;
+          }
+        }
+        .moreinfo {
+          display: block;
+          font-size: 28rpx;
+          line-height: 60rpx;
+          background: #f8f8f8;
+          color: @red;
+          text-align: center;
+          border-radius: 10rpx;
+          margin: 20rpx 0 24rpx;
+        }
+      }
+      .tixingbox {
+        position: relative;
+        width: 510rpx;
+        margin: 0 auto;
+        padding-bottom: 20rpx;        
+        display: flex;
+        justify-content: space-between;
+        .tip {
+          font-size: 28rpx;
+          color: #494949;
+          display: flex;
+          flex-direction: row;
+          .timeico {
+            display: block;
+            width: 40rpx;
+            height: 40rpx;
+            margin: 5rpx 10rpx 0 0;
+          }
+          .priceico {
+            display: block;
+            width: 40rpx;
+            height: 40rpx;
+            margin: 5rpx 10rpx 0 0;
+          }
+        }
+      }
+    
+      .telbox {
+        position: relative;
+        margin: 0 30rpx 30rpx;
+        box-sizing: border-box;
+        margin: 0 auto;
+        background: #fff;      
+        border-top: 1px solid #eee;      
+        .telbg{
+          position: relative;
+          width: 100%;
+          height: 125rpx;
+          padding:0 20rpx;
+          box-sizing: border-box;
+          background:#ff5470;
+          margin-top: 25rpx;
+          border-radius: 10rpx;
+          display: flex;
+          justify-content: space-between;
+        }
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+        .lef {
+          .telnum {
+            font-size: 48rpx;
+            color: #fff;
+            line-height: 60rpx;
+            margin-top: 16rpx;
+          }
+          .teltxt {
+            font-size: 20rpx;
+            color: #fff;
+            line-height: 40rpx;
+          }
+        }
+        .wximg {
+          width: 72rpx;
+          height: 72rpx;
+          margin-right: 20rpx;
+          margin-top: 30rpx;
+        }
+      }
+    }
+    .titlebox {
+      position: relative;
+      width: 100%;
+      padding: 0 0 30rpx;
+      margin-top:15rpx;
+      border-radius: 10rpx;
+      box-sizing:border-box;
+      background: #fff;
+      
+    }
+    .huxingbox {
+      position: relative;
+      width: 100%;
+      padding-bottom:30rpx;
+      box-sizing:border-box;
+      margin-top: 20rpx;
+      background: #fff;
+      .ulbox {
+        position: relative;
+        width: 100%;
+        // overflow-x: scroll;
+        // -webkit-overflow-scrolling: touch;
+        .huxingbd {
+          position: relative;
+          width: auto;
+          margin-top: 20rpx;
+          white-space: nowrap;
+          margin-left: 20rpx;
+          .wxli {
+            display: inline-block;            
+            width: 250rpx;
+            padding-right: 20rpx;
+            .imgbox {
+              position: relative;
+              width: 100%;
+              height: 330rpx;
+              overflow: hidden;
+              margin-top: 10rpx;
+              border-radius: 10rpx;
+              .wximg {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .bomtxt {
+              font-size: 28rpx;
+              color: #333;
+              line-height: 50rpx;
+              text-align: center;
+              .shi {
+                margin-top: 10rpx;
+              }
+              .mianji {
+                font-size: 24rpx;
+                color: @red;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mapbox {
+      position: relative;
+      width: 6.7rpx;
+      margin: 0 auto;
+      padding: 0 0.2rpx;
+      margin-top: 0.2rpx;
+      background: #fff;
+      border-radius: 0.1rpx;
+      .mapbd {
+        position: relative;
+        margin-top: 0.2rpx;
+        width: 100%;
+        height: 5.2rpx;
+        overflow: hidden;
+        box-shadow: 0px 2px 3px rgba(170, 170, 170, 0.1);
+        .bm-view {
+          width: 100%;
+          height: 100%;
+          .map {
+            width: 100%;
+            height: 100%;
+          }
+          .BMapLabel {
+            color: #333;
+            padding: 0.1rpx 0.2rpx;
+            box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
+            font-size: 0.24rpx;
+            .jiao {
+              position: absolute;
+              bottom: -0.1rpx;
+              left: 50%;
+              margin-left: -0.05rpx;
+              width: 0;
+              height: 0;
+              border-top: 0.1rpx solid #fff;
+              border-left: 0.08rpx solid transparent;
+              border-right: 0.08rpx solid transparent;
+            }
+          }
+        }
+        .bomtap {
+          position: absolute;
+          width: 100%;
+          height: 0.76rpx;
+          background: #fff;
+          left: 0;
+          bottom: 0;
+          z-index: 9;
+          display: flex;
+          flex-direction: row;
+          span {
+            width: 1.3rpx;
+            border-right: 1px solid #a5a5a5;
+            font-size: 0.28rpx;
+            line-height: 0.2rpx;
+            height: 0.2rpx;
+            margin-top: 0.26rpx;
+            text-align: center;
+            color: #333;
+          }
+          span:nth-last-child(1) {
+            border-right: 0;
+          }
+        }
+      }
+    }
+    .shapanbox {
+      position: relative;
+      width: 6.7rpx;
+      margin: 0 auto;
+      padding: 0 0.2rpx;
+      margin-top: 0.2rpx;
+      background: #fff;
+      border-radius: 0.1rpx;
+      padding-bottom: 0.2rpx;
+      .shapbd {
+        position: relative;
+        width: 100%;
+        height: 4.5rpx;
+        overflow: hidden;
+        .content {
+          position: absolute;
+          top: -280px;
+          left: -100px;
+          width: 900px;
+          height: 600px;
+          .lppage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 900px;
+            height: 600px;
+            li {
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding: 0 0.18rpx;
+              font-size: 0.24rpx;
+              line-height: 0.42rpx;
+              color: #fff;
+              background: @blue;
+            }
+          }
+        }
+      }
+      .shapanmore {
+        position: relative;
+        width: 100%;
+        height: 0.8rpx;
+        background: #eee;
+        color: @blue;
+        font-size: 0.28rpx;
+        line-height: 0.8rpx;
+        text-align: center;
+        margin-top: 0.16rpx;
+      }
+    }
+    
+    .dianpingbox {
+      position: relative;
+      width: 100%;
+      padding-bottom:30rpx;
+      box-sizing:border-box;
+      margin-top: 20rpx;
+      background: #fff;
+      .pingluntap{
+        position: relative;
+        margin:0 30rpx;
+        height: 70rpx;
+        background: #f8f8f8;
+        font-size: 28rpx;
+        line-height: 70rpx;
+        color: @red;
+        text-align: center;
+        border-radius: 5rpx;
+      }
+    }
+  }
+  
+  
+  .titleh2 {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 36rpx;
+    text-indent: 30rpx;
+    color: #353535;
+    line-height: 70rpx;
+    border-bottom:1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    .tittxt {
+      margin-top: 10rpx;
+      min-width: 200rpx;
+    }    
+    .morebox {      
+      font-weight: normal;
+      margin-right: 30rpx;
+      font-size: 28rpx;
+      color: #888;
+      .moreimg{
+        width: 10rpx;
+      }
+    }
+  }
+  .bombox {
+    position: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    height: 1.16rpx;
+    display: flex;
+    justify-content: space-between;
+    .love {
+      width: 1.4rpx;
+      font-size: 0.22rpx;
+      color: #666;
+      text-align: center;
+      line-height: 0.44rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .loveico {
+        display: block;
+        margin: 0.26rpx auto 0;
+        width: 0.42rpx;
+        height: 0.38rpx;
+        // background: url(../assets/img/loveico.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+    }
+    .on {
+      color: @red;
+      .loveico {
+        // background: url(../assets/img/loveico-on.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+    }
+    .zixun {
+      background: #ffcc1b;
+    }
+    .tel {
+      background: @blue;
+    }
+    .zixuntel {
+      position: relative;
+      width: 3.05rpx;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      font-size: 0.32rpx;
+      color: #fff;
+      line-height: 1.16rpx;
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .zixunico {
+        display: block;
+        margin-right: 0.2rpx;
+        margin-top: 0.36rpx;
+        width: 0.48rpx;
+        height: 0.48rpx;
+        // background: url(../assets/img/zixunico.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+      .telico {
+        display: block;
+        margin-right: 0.2rpx;
+        margin-top: 0.34rpx;
+        width: 0.37rpx;
+        height: 0.45rpx;
+        // background: url(../assets/img/freetelico.png) no-repeat center;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+.headerhouse {
+  position: absolute;
+  top: 0.45rpx;
+  left: 0.45rpx;
+  width: 6.6rpx;
+  display: flex;
+  justify-content: space-between;
+  z-index: 99;
+  .navprevbox {
+    width: 0.64rpx;
+    height: 0.64rpx;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    .navprve {
+      display: block;
+      margin: 0.15rpx auto;
+      width: 0.2rpx;
+    }
+  }
+  .menubox {
+    width: 0.64rpx;
+    height: 0.64rpx;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    .menu {
+      display: block;
+      margin: 0.18rpx auto;
+      width: 0.3rpx;
+    }
+  }
+}
+.menutopimg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.17rpx;
+  height: 0.9rpx;
+  z-index: 99;
+}

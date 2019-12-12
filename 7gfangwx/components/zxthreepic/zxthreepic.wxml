@@ -1,0 +1,11 @@
+<!--components/zxthreepic/zxthreepic.wxml-->
+  <view class="zxborder zxthreepic" bindtap="newsinfo">
+    <text class="title">{{ title }}</text>
+    <view class="threepic">
+      <image src="{{item}}" alt="" wx:for="{{imgArr}}" wx:key="key" class="zxpic" />
+    </view>
+    <view class="ltime">
+      <text>{{ username }}</text>
+      <text>{{ datetime }}</text>
+    </view>
+  </view>

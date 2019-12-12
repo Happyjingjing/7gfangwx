@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "tem-lpdongtai": "/components/lpdongtai/lpdongtai"
+  }
+}

@@ -1,0 +1,36 @@
+<!--components/xiangce/xiangce.wxml-->
+<view class="xiangcetan">
+    <swiper class="swiper-container xiangcesw" current="{{currentidx}}" bindchange="swiperchange">
+      <swiper-item class="swiper-slide"
+                    wx:for="{{xiangceList}}"
+                    wx:key="{{index}}">
+        <image class="wximg" mode="aspectFit" src="{{item.img_path}}" alt="" />
+        
+        <!-- <router-link tag="a"
+                     v-if="item.apartment_shi"
+                     :to="{ name: 'huxinginfo', params: { a_id: item.id } }"
+                     class="link">
+        </router-link> -->
+        <view class="bombox">
+          <view class="pictxt swbomtxt"
+            wx:if="{{item.loupan_album_val}}">
+            {{ item.loupan_album_val }}
+          </view>
+          <view class="pictxt swbomtxt"
+            wx:if="{{item.apartment_shi}}" >
+            {{ item.apartment_shi}}室{{ item.apartment_ting}}厅{{ item.apartment_wei}}卫-{{ item.house_area }}m²
+          </view>
+          
+        </view>
+
+      </swiper-item>
+    </swiper>
+    <view class="swiper-pagination xiangcepage">{{currentidx+1}}/{{xiangceList.length}}</view>
+    <!-- <view class="bombox">
+      <view class="pictxt swbomtxt">
+        {{ swbomtxt }}
+      </view>
+      
+      <view class="swiper-pagination xiangcepage">{{idx+1}}/{{xiangceList.length}}</view>
+    </view> -->
+  </view>

@@ -1,0 +1,38 @@
+.zxtxtpic {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.zxtxtpic .lef {
+  width: 380rpx;
+}
+.zxtxtpic .lef .title {
+  display: block;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: #000;
+  height: 120rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.zxtxtpic .lef .ltime {
+  font-size: 24rpx;
+  color: #8c8c8c;
+  line-height: 26rpx;
+  margin-top: 26rpx;
+}
+.zxtxtpic .lef .ltime .zxspan {
+  margin-right: 40rpx;
+}
+.zxtxtpic .rig {
+  width: 265rpx;
+  height: 170rpx;
+}
+.zxtxtpic .rig .zxpic {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,32 @@
+<!--pages/video/video.wxml-->
+  <view class="video">
+   
+    <view class="videolist">
+      <view class="vidul">
+        <view class="vidli" wx:for="{{videoList}}"
+          wx:key="{{item.v_id}}"
+          data-vid="{{item.v_id}}" 
+          bindtap="videoinfo" >
+          <view class="picbox">
+            <image class="vidimg" mode="aspectFill" src="{{item.thumbnail}}" alt="" />
+            <!-- <i class="startico"></i> -->
+            <p class="bomtxt">{{ item.post_title }}</p>
+          </view>
+          <view class="bombox">
+            <view class="lef">
+              <image class="vidimg" mode="widthFix" src="../../images/tximg.png" alt="" />
+              <!-- item.avatar -->
+              <text class="vidspan">{{ item.user_nickname }}</text>
+            </view>
+            <view class="rig">
+              <image class="rigimg" mode="widthFix" src="../../images/seeico.png" alt="" />
+              {{ item.post_hits }}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="morelp">
+        {{ nomore ? "没有更多了" : "正在加载..." }}
+      </view>
+    </view>
+  </view>

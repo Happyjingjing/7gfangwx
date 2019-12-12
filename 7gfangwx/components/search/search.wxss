@@ -1,0 +1,60 @@
+.search {
+  position: relative;
+  width: 100%;
+  padding: 18rpx 0;
+  background: #ff2b0a;
+}
+.search .searchbox {
+  position: relative;
+  width: 722rpx;
+  height: 64rpx;
+  border-radius: 5rpx;
+  background: #fff;
+  margin: 0 auto;
+  display: flex;
+  justify-content: row;
+  z-index: 3;
+}
+.search .searchbox .place {
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  line-height: 64rpx;
+  color: #4e4e4e;
+}
+.search .searchbox .searchbd {
+  position: relative;
+  width: 600rpx;
+  display: flex;
+  justify-content: row;
+}
+.search .searchbox .searchbd .sespan {
+  display: block;
+  height: 24rpx;
+  margin-top: 22rpx;
+  margin-left: 10rpx;
+  border-left: 1px solid #b2b2b2;
+}
+.search .searchbox .searchbd .sespan .searchico {
+  display: block;
+  width: 27rpx;
+  height: 27rpx;
+  margin-left: 18rpx;
+}
+.search .searchbox .searchbd .searchinp {
+  width: 540rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  margin-top: 10rpx;
+  color: #000;
+  font-size: 28rpx;
+  margin-left: 10rpx;
+  border: 0 none;
+  background: #fff;
+  outline: none;
+}
+.isseplace .place {
+  display: none;
+}
+.isseplace .sespan {
+  border-left: 0 !important;
+}

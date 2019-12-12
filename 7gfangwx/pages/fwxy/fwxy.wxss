@@ -1,0 +1,21 @@
+.fwxy {
+  position: relative;
+  padding: 60rpx 55rpx 80rpx;
+}
+.fwxy .fwxyh1 {
+  font-size: 36rpx;
+  color: #333;
+  line-height: 80rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+  font-weight: normal;
+}
+.fwxy .fwxyp {
+  min-height: 44rpx;
+}
+.fwxy .content {
+  font-size: 24rpx;
+  line-height: 44rpx;
+  color: #333;
+  text-align: justify;
+}

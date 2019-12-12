@@ -1,0 +1,117 @@
+<!--pages/newhouse/newhouse.wxml-->
+<view class="container">
+  <tem-search searchword="searchword" isseplace="isseplace" />
+
+  <view
+      class="searchsubbox {{isFixed ? 'fixedBar':''}} {{ istopfix ? 'navtopfix':''}}"
+      id="fixedBar" bindtap="fixblank">
+    <view class="searchul">
+      <view class="searchli {{quyudownshow ? 'on':''}}" catchtap="getSonAreaListData">
+        <view class="searchp">
+          <text>区域</text>
+          <i></i>
+        </view>
+      </view>
+      <view class="searchli {{jiagedownshow ? 'on':''}}" catchtap="getPriceListData">
+        <view class="searchp">
+          <text>均价</text>
+          <i></i>
+        </view>
+      </view>
+      <view class="searchli {{huxingdownshow ? 'on':''}}" catchtap="getapartmentListData">
+        <view class="searchp">
+          <text>户型</text>
+          <i></i>
+        </view>
+      </view>
+    </view>
+
+     <view class="seardownbox"
+           hidden="{{!quyudownshow}}">
+      <view class="downsel">
+        <view class="lefsel">
+          <view class="lefli {{ index == onidx ? 'on' : '' }}"
+              wx:for="{{seltype}}"
+              wx:key="key"
+              catchtap="qucli"
+              data-index="{{index}}">
+            {{ item }}
+          </view>
+        </view>
+        <view class="rigsel"
+            hidden="{{!quyushow}}">
+          <view class="lefli {{index == qulion ? 'on' :''}}" wx:for="{{quyuList}}"
+              wx:key="key"
+              catchtap="quyubtn" data-itemid="{{item.id}}">
+            {{ item.name }}
+          </view>
+        </view>
+        <view class="rigsel"
+            hidden="{{quyushow}}">
+          <view class="lefli {{index == tylion ? 'on' : ''}}" wx:for="{{typeList}}"
+              wx:key="key"
+              catchtap="typebtn" data-itemid="{{item.id}}">
+            {{ item.title }}
+          </view>
+        </view>
+      </view>
+      <view class="bombox">
+        <text class="reset"
+            catchtap="reset">重置</text>
+        <text class="define"
+            catchtap="define">确定</text>
+      </view>
+    </view>
+
+    <view class="seardownbox"
+          hidden="{{!jiagedownshow}}">
+      <view class="downsel">
+        <view class="lefsel">
+          <view class="lefli on">单价</view>
+        </view>
+        <view class="rigsel jiage">
+          <view class="rigli {{index == prilion ? 'on' :''}}" wx:for="{{priceList}}"
+              wx:key="key"
+              catchtap="pricebtn" data-itemid="{{item.p_id}}">
+            {{ item.price }}
+          </view>
+        </view>
+      </view>
+      <view class="bombox">
+        <text class="reset"
+            catchtap="reset">重置</text>
+        <text class="define"
+            catchtap="define">确定</text>
+      </view>
+    </view>
+
+    <view class="seardownbox"
+          hidden="{{!huxingdownshow}}">
+      <view class="downsel">
+        <view class="rigsel huxing">
+          <view class="rigli {{huxlion[index] == 1 ? 'on' :''}}"  wx:for="{{huxingList}}"
+              wx:key="key"
+              catchtap="huxingbtn" data-itemid="{{item.h_id}}">
+            {{ item.jushi }}
+          </view>
+        </view>
+      </view>
+      <view class="bombox">
+        <text class="reset"
+            catchtap="reset">重置</text>
+        <text class="define"
+            catchtap="define">确定</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="searchsubbd">
+    <tem-tuijianlp tuijlpList="{{tuijlpList}}" nowurl="{{nowurl}}" />
+    <view class="morelp">
+      {{ nomore ? "没有更多了" : "正在加载..." }}
+    </view>
+    <view class="nodata" wx:if="nodata">暂无数据</view>
+  </view>
+
+</view>

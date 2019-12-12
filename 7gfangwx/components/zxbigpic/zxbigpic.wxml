@@ -1,0 +1,12 @@
+<!--components/zxbigpic/zxbigpic.wxml-->
+
+<view class="zxbigpic" bindtap="newsinfo">
+  <image wx:for="{{imgArr}}" 
+         wx:key="key" 
+         wx:if="{{index == 0}}"
+         mode="widthFix"
+         src="{{item}}"
+         alt=""
+         class="zxpic" />
+  <text class="zxp">{{title}}</text>
+</view>

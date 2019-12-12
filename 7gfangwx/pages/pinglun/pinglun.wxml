@@ -1,0 +1,3 @@
+<!--pages/pinglun/pinglun.wxml-->
+<tem-pinglunlist pinglun="{{pinglun}}" />
+

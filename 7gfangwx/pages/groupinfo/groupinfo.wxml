@@ -1,0 +1,72 @@
+<!--pages/groupinfo/groupinfo.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="groupinfo">
+  <view class="toppic">
+    <image class="groimg" mode="widthFix" src="{{groupinfo.image_path}}" alt="" />
+    <view class="grop">{{ groupinfo.title }}</view>
+  </view>
+  <view class="txtbox">
+    <view class="groh2">活动说明:</view>
+    <view class="grop">
+      参与人数：
+      <text class="grospan">{{ groupinfo.group_people_num }}人已报名</text>
+    </view>
+    <view class="grop">活动时间：<text class="grospan">{{ groupinfo.start_time }} - {{ groupinfo.end_time }}</text></view>
+    <view class="grop red" wx:if="{{}}">专属优惠：<text class="grospan">{{ }}</text></view>
+    <view class="grop red" wx:else>专属优惠：待定</view>
+    <view class="grop">看房热线：<text class="grospan">{{ groupinfo.mobile }}</text></view>
+  </view>
+
+  <view class="txtjieshao">
+    <view class="groh2">项目简介:</view>
+    <view class="grop">参考均价： <text class="grospan">{{ groupinfo.price }} 元/㎡</text></view>
+    <view class="grop">物 业 费 ： <text class="grospan">{{ groupinfo.property_price }}元/㎡·月</text></view>
+    <view class="grop">
+      项目特色：
+      <text class="grospan"
+        wx:for="{{groupinfo.category_liked_val}}"
+        wx:key="{{index}}"
+        >{{ item.title }}</text>
+    </view>
+    <view class="grop" wx:if="groupinfo.property_right_val">
+      产权年限：
+      <text class="grospan" wx:for="{{groupinfo.property_right_val}}" wx:key="{{index}}"
+        >{{ item }}年</text>
+    </view>
+    <view class="grop" wx:else>产权年限： <text class="grospan">暂无数据</text></view>
+    <view class="grop">
+      装修状况：
+      <text class="grospan"
+        wx:for="{{groupinfo.renovation_status_val}}"
+        wx:key="{{index}}"
+        >{{ item }}</text>
+    </view>
+    <view class="grop">
+      交房时间：
+      <text class="grospan">{{ groupinfo.deliver_date ? groupinfo.deliver_date : "暂无数据" }}</text>
+    </view>
+    <view class="grop">
+      开盘时间：<text class="grospan">{{ groupinfo.start_time ? groupinfo.start_time : "暂无数据" }}</text>
+    </view>
+    <view class="grop">
+      物业公司：
+      <text class="grospan">{{
+        groupinfo.property_company ? groupinfo.property_company : "暂无数据"
+      }}</text>
+    </view>
+    <view class="grop">
+      售楼地址：
+      <text class="grospan">{{ groupinfo.sale_address ? groupinfo.sale_address : "暂无数据" }}</text>
+    </view>
+  </view>
+
+  <view class="txtjieshao">
+    <view class="groh2">项目介绍:</view>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+  </view>
+
+  <view class="grop" class="lijibm" bindtap="lijibm">立即报名</view>
+
+  <tem-baomingtan title="{{title}}" isinfotan="{{isinfotan}}" bind:infotan="infotan" />  
+</view>
+  

@@ -1,0 +1,18 @@
+<!--pages/videoinfo/videoinfo.wxml-->
+<view class="swiperbox">
+  <navigationBar navbar-data="{{navbarData}}"  />
+  <swiper class="swiper" current="{{playindex}}" vertical="true" bindchange="swiperchange">
+    <swiper-item wx:for="{{videoList}}" wx:key="{{index}}" class="swiperitem {{item.back}}" >
+      <video class="video" bindtap="videotap"
+              src="{{item.videourl}}"
+              id="{{index}}"
+              loop="{{true}}"
+              custom-cache="{{false}}"
+              show-fullscreen-btn="{{false}}" 
+              show-play-btn="{{false}}"
+              show-center-play-btn="{{false}}" >
+      </video>
+    </swiper-item>
+  </swiper>
+</view>
+

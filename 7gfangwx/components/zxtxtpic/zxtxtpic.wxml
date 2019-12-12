@@ -1,0 +1,13 @@
+<!--components/zxtxtpic/zxtxtpic.wxml-->
+  <view class="zxborder zxtxtpic" bindtap="newsinfo">
+    <view class="lef">
+      <text class="title">{{ title }}</text>
+      <view class="ltime">
+        <text class="zxspan">{{ username }}</text>
+        <text class="zxspan">{{ datetime }}</text>
+      </view>
+    </view>
+    <view class="rig">
+      <image src="{{item}}" alt="" wx:for="{{imgArr}}" wx:key="key" class="zxpic" />
+    </view>
+  </view>

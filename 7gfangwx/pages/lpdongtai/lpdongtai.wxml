@@ -1,0 +1,3 @@
+<!--pages/lpdongtai/lpdongtai.wxml-->
+
+<tem-lpdongtai news="{{news}}" />

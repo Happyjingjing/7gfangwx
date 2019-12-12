@@ -1,0 +1,22 @@
+.zxtxt {
+  position: relative;
+  width: 100%;
+  padding: 20rpx 0;
+}
+.zxtxt .txtbox {
+  width: 100%;
+}
+.zxtxt .txtbox .title {
+  display: block;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: #000;
+}
+.zxtxt .txtbox .ltime {
+  font-size: 24rpx;
+  color: #8c8c8c;
+  line-height: 26rpx;
+  margin-top: 26rpx;
+  display: flex;
+  justify-content: space-between;
+}

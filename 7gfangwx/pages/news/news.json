@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "tem-zxbigpic": "/components/zxbigpic/zxbigpic",
+    "tem-zxthreepic": "/components/zxthreepic/zxthreepic",
+    "tem-zxtxt": "/components/zxtxt/zxtxt",
+    "tem-zxtxtpic": "/components/zxtxtpic/zxtxtpic"
+  }
+}

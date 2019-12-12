@@ -1,0 +1,68 @@
+.newsinfo {
+  position: relative;
+  padding: 0 30rpx;
+}
+.newsinfo .article {
+  position: relative;
+  width: 100%;
+}
+.newsinfo .article .txtinfo {
+  font-size: 28rpx;
+  color: 656565;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.newsinfo .article .txtinfo text {
+  margin-right: 30rpx;
+}
+.newsinfo .article .articlebd {
+  width: 100%;
+}
+.newsinfo .article .articlebd .wxParse-table {
+  width: 100%;
+}
+.newsinfo .article .articlebd .wxParse-p {
+  display: block;
+  font-size: 28rpx;
+  color: #131313;
+  line-height: 50rpx;
+}
+.newsinfo .article .articlebd .wxParse-img {
+  display: block;
+  margin: 20rpx 0;
+}
+.newsinfo .article .articlebd .zanbox {
+  position: relative;
+}
+.newsinfo .article .articlebd .zanbox .zanico {
+  display: block;
+  float: right;
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx;
+  background: url(../assets/img/zanico.png) no-repeat center;
+  background-size: 100%;
+}
+.newsinfo .article .articlebd .zanbox .zanico-on {
+  background: url(../assets/img/zanico-on.png) no-repeat center;
+  background-size: 100%;
+}
+.newsinfo .tjread {
+  position: relative;
+  width: 100%;
+}
+.titleh2 {
+  margin-top: 30rpx;
+  font-size: 38rpx;
+  color: #000;
+  line-height: 70rpx;
+}
+.morelp {
+  font-size: 24rpx;
+  line-height: 80rpx;
+  color: #808080;
+  text-align: center;
+}
+.forbox:nth-last-child(1) div {
+  border-bottom: 0;
+}

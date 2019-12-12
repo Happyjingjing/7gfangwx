@@ -1,0 +1,112 @@
+@red: #ff2b0a;
+.infoboxtan {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 999;
+  
+  .close {
+    display: block;
+    position: absolute;
+    width: 30rpx;
+    height: 30rpx;
+    top: 20rpx;
+    right: 20rpx;
+  }
+  .tanmain {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 680rpx;
+    height: 490rpx;
+    margin: -200rpx 0 0 -340rpx;
+    border-radius: 10rpx;
+    .titlebox {
+      font-weight: normal;
+      line-height: 90rpx;
+      color: #333;
+      font-size: 40rpx;
+      margin:10rpx 30rpx 0;
+      // .line{
+      //   display: block;
+      //   float: left;
+      //   width: 0;
+      //   height: 28rpx;
+      //   border-left: 2px solid @red;
+      //   margin: 28rpx 10rpx 0 0;
+      // }
+      .grospan {
+        font-size: 24rpx;
+        color: #999;
+        margin-left: 10rpx;
+      }
+    }
+    .formbox {      
+      margin:0 30rpx;   
+      input {
+        display: block;
+        width: 100%;
+        height: 86rpx;
+        border: 1px solid #bfbfbf;
+        box-sizing: border-box;
+        margin-bottom: 20rpx;
+        // text-indent: 20rpx;
+        padding: 0 20rpx;
+        font-size: 30rpx;
+        color: #333;
+        line-height: 86rpx;
+        border-radius: 10rpx;
+        background: none;
+        outline: none;
+      }
+      .agree {
+        width: 100%;
+        margin-bottom: 30rpx;
+        color: #999;
+        display: flex;
+        flex-direction: row;
+        .duiico {
+          display: block;
+          float: left;
+          width: 28rpx;
+          height: 28rpx;
+          border: 1px solid #aaa;
+          margin-right: 10rpx;
+          margin-top: 2px;
+          box-sizing: border-box;
+        }
+        .duiicon{
+          display: block;
+          float: left;
+          width: 28rpx;
+          height: 28rpx;
+          margin-right: 10rpx;
+          margin-top: 2px;
+        }
+        .grospan {
+          font-size: 24rpx;
+          color: #999;
+          margin-left: 10rpx;
+        }
+        .groa {
+          color: @red;
+          font-size: 24rpx;
+          margin-left: 10rpx;
+        }
+      }
+      .yuyuetab {
+        height: 80rpx;
+        line-height: 80rpx;
+        border-radius: 10rpx;
+        background: @red;
+        font-size: 30rpx;
+        text-align: center;
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+@red: #ff222c;
+@blue: #1fa2ff;
+.container{
+  position: relative;
+  width: 100%;
+
+  .searchsubbox {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    &.fixedBar {
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+    }
+    .searchul {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 0px 0px 3px rgba(163, 163, 163, 0.2);
+      border-bottom: 1px solid #f8f8f8;
+      background: #fff;
+      .searchli {
+        width: 33%;
+        font-size: 32rpx;
+        line-height: 74rpx;
+        color: #000;
+        .searchp {
+          width: 90rpx;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          i {
+            margin-top: 40rpx;
+            width: 0;
+            height: 0;
+            border-top: 10rpx solid #333;
+            border-left: 8rpx solid transparent;
+            border-right: 8rpx solid transparent;
+          }
+        }
+      }
+      .searchli.on {
+        i {
+          border-top: 0;
+          border-bottom: 10rpx solid @red;
+          border-left: 8rpx solid transparent;
+          border-right: 8rpx solid transparent;
+        }
+      }
+    }
+  }
+  .searchsubbd {
+    position: relative;
+    padding: 0 30rpx;
+    margin-top: 10rpx;
+  }
+  .morelp {
+    font-size: 24rpx;
+    line-height: 80rpx;
+    color: #808080;
+    text-align: center;
+  }
+}
+.seardownbox {
+  width: 100%;
+  z-index: 9;
+  background: #fff;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  .downsel {
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+    line-height: 90rpx;
+    text-indent: 50rpx;
+    height: 600rpx;
+    .lefsel {
+      width: 50%;
+      background: #f1f1f1;
+      li {
+        width: 100%;
+        color: #000;
+      }
+      .on {
+        color: @red;
+        background: #fff;
+      }
+    }
+    .rigsel {
+      width: 50%;
+      height: 100%;
+      overflow-y: scroll;
+      background: #fff;
+      li {
+        width: 100%;
+        color: #000;
+        &.on {
+          color: @red;
+        }
+      }
+    }
+    .huxing {
+      width: 100%;
+      li {
+        border-bottom: 1px solid #eee;
+      }
+      li:nth-last-child(1) {
+        border-bottom: none;
+      }
+    }
+  }
+  .bombox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 32rpx;
+    line-height: 90rpx;
+    height: 90rpx;
+    text-align: center;
+    .reset {
+      width: 250rpx;
+      background: #fff;
+      color: @red;
+    }
+    .define {
+      width: 500rpx;
+      background: @red;
+      color: #fff;
+    }
+  }
+}
+.nodata {
+  font-size: 30rpx;
+  padding: 100rpx 30rpx;
+  text-align: center;
+  color: #333;
+  line-height: 100rpx;
+}
+.container {
+  .navtopfix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4) !important;
+    z-index: 999;
+  }
+}

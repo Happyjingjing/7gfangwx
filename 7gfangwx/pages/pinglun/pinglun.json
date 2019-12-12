@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "tem-pinglunlist": "/components/pinglunlist/pinglunlist"
+  }
+}

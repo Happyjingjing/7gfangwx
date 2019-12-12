@@ -1,6 +1,108 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
+  <tem-search searchword="searchword" isseplace="isseplace" />
+
+  <view class="banner">
+    <swiper class="bannersw" indicator-dots="true" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ff222c" autoplay="true" interval="5000" circular="true" >
+        <swiper-item class="swiper-slide">
+          <a href="#" target="_blank">
+            <image src="../../images/bannerimg01.jpg" mode="widthFix" alt="" />
+          </a>
+        </swiper-item>
+        <swiper-item class="swiper-slide">
+          <a href="#" target="_blank">
+            <image src="../../images/bannerimg01.jpg" mode="widthFix" alt="" />
+          </a>
+        </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="lnav">
+    <view class="navli" bindtap="newhouse">
+      <image src="../../images/navico01.png" mode="widthFix" class="navicon" />
+        <text>新房</text>
+    </view>
+    <view class="navli" bindtap="group">
+        <image src="../../images/navico02.png" mode="widthFix" class="navicon" />
+        <text>团购</text>
+    </view>
+    <view class="navli" bindtap="activitys">
+        <image src="../../images/navico03.png" mode="widthFix" class="navicon" />
+        <text>看房团</text>
+    </view>
+    <view class="navli" bindtap="news">
+        <image src="../../images/navico04.png" mode="widthFix" class="navicon" />
+        <text>资讯</text>
+    </view>
+    <view class="navli" bindtap="video">
+        <image src="../../images/navico05.png" mode="widthFix" class="navicon" />
+        <text>快看</text>
+    </view>
+  </view>
+
+  <view class="navbox">
+    <image src="../../images/pricebg.png" class="fjbg" mode="widthFix" />
+    <text class="fjh2">廊坊房价</text>
+    <view class="fjul">
+      <view class="fjli">
+        <text class="red">
+          <text class="fjspan">1200元/m²</text>
+        </text>
+        <text>最新均价</text>
+      </view>
+      <view class="fjli">
+        <text class="blue" v-else>+40%</text>
+        <text>比上月</text>
+      </view>
+      <view class="fjli">
+        <text class="red" v-else>+40%</text>
+        <text>比去年</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="zixunbox">
+    <view class="titleh2">今日资讯</view>
+    <tem-zxbigpic title="{{newsTop.post_title}}"
+                        imgArr="{{newsTop.img_path}}"
+                        nid="{{newsTop.n_id}}"
+                        nowurl="{{nowurl}}" />
+    <view class="zxborder" wx:for="{{newsList}}" wx:key="key">      
+      <tem-zxthreepic wx:if="{{item.img_num == 3}}"
+          title="{{item.post_title}}"
+          username="{{item.user_nickname}}"
+          datetime="{{item.published_time}}"
+          imgArr="{{item.img_path}}"
+          nid="{{item.n_id}}"
+          nowurl="{{nowurl}}" />
+      <tem-zxtxtpic wx:if="{{item.img_num == 1}}"
+          title="{{item.post_title}}"
+          username="{{item.user_nickname}}"
+          datetime="{{item.published_time}}"
+          imgArr="{{item.img_path}}"
+          nid="{{item.n_id}}"
+          nowurl="{{nowurl}}" />
+
+      <tem-zxtxt wx:if="{{item.img_num == 0}}"
+          title="{{item.post_title}}"
+          username="{{item.user_nickname}}"
+          datetime="{{item.published_time}}"
+          nid="{{item.n_id}}"
+          nowurl="{{nowurl}}" />
+      
+    </view>
+    
+  </view>
+
+  <view class="tuijianlpbox">
+    <view class="titleh2">推荐楼盘</view>
+    <tem-tuijianlp tuijlpList="{{tuijlpList}}" nowurl="{{nowurl}}" />
+    <view class="morelp">
+      {{ nomore ? "没有更多了" : "正在加载..." }}
+    </view>
+  </view>
+
+  <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -9,5 +111,5 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-  </view>
+  </view> -->
 </view>

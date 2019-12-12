@@ -1,0 +1,10 @@
+<!--components/lpdongtai/lpdongtai.wxml-->
+
+<view class="dongtul">
+  <view class="wxli" data-nid="{{item.id}}" bindtap="newsinfo"
+    wx:for="{{news}}"
+    wx:key="index">
+    <view class="dongtxt">{{ item.post_title }}</view>
+    <text class="pubdate">{{ item.published_time }}</text>
+  </view>
+</view>

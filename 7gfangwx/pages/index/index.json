@@ -1,4 +1,12 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "7G房"
+  "usingComponents": {
+    "tem-search": "/components/search/search",
+    "tem-zxbigpic": "/components/zxbigpic/zxbigpic",
+    "tem-zxthreepic": "/components/zxthreepic/zxthreepic",
+    "tem-zxtxt": "/components/zxtxt/zxtxt",
+    "tem-zxtxtpic": "/components/zxtxtpic/zxtxtpic",
+    "tem-tuijianlp": "/components/tuijianlp/tuijianlp"
+
+  },
+  "navigationBarTitleText": "喜欢房"
 }

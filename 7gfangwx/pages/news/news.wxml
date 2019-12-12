@@ -1,0 +1,35 @@
+<!--pages/news/news.wxml-->
+  <view class="news">
+    <tem-zxbigpic 
+      title="{{newsTop.post_title}}"
+      imgArr="{{newsTop.img_path}}"
+      nid="{{newsTop.n_id}}"
+      nowurl="{{nowurl}}" />
+    <view class="zxborder" wx:for="{{newsList}}" wx:key="key">      
+      <tem-zxthreepic wx:if="{{item.img_num == 3}}"
+          title="{{item.post_title}}"
+          username="{{item.user_nickname}}"
+          datetime="{{item.published_time}}"
+          imgArr="{{item.img_path}}"
+          nid="{{item.n_id}}"
+          nowurl="{{nowurl}}" />
+      <tem-zxtxtpic wx:if="{{item.img_num == 1}}"
+          title="{{item.post_title}}"
+          username="{{item.user_nickname}}"
+          datetime="{{item.published_time}}"
+          imgArr="{{item.img_path}}"
+          nid="{{item.n_id}}"
+          nowurl="{{nowurl}}" />
+
+      <tem-zxtxt wx:if="{{item.img_num == 0}}"
+          title="{{item.post_title}}"
+          username="{{item.user_nickname}}"
+          datetime="{{item.published_time}}"
+          nid="{{item.n_id}}"
+          nowurl="{{nowurl}}" />
+      
+    </view>
+    <view class="morelp">
+      {{ nomore ? "没有更多了" : "正在加载..." }}
+    </view>
+  </view>

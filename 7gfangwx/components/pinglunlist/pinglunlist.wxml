@@ -1,0 +1,23 @@
+<!--components/pinglunlist/pinglunlist.wxml-->
+<view class="container">
+
+  <view class="dianpbd">
+    <view class="wxul">
+      <view class="wxli" wx:for="{{pinglun}}" wx:key="index">
+        <view class="litop">
+          <image mode="widthFix" src="../../images/tximg.png" alt="" class="tx" />
+          <view class="rigbox">
+            <view class="nametime">{{ item.fullname }}</view>            
+            <view class="nametime">{{ item.create_time }}</view>  
+          </view>
+        </view>
+        <view class="pingtxt">{{ item.content }}</view>
+        <image wx:if="{{}}" mode="widthFix" src="{{}}" alt="" class="pingimg" />
+      </view>
+    </view>  
+    
+  </view>
+  
+</view>
+
+

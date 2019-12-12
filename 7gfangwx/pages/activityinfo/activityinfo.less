@@ -1,0 +1,146 @@
+@red: #ff222c;
+@blue: #1fa2ff;
+.groupinfo {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100rpx;
+  .toppic {
+    position: relative;
+    width: 100%;
+    height: 530rpx;
+    overflow: hidden;
+    .groimg {
+      width: 100%;
+      height: 100%;
+    }
+    .grop {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60rpx;
+      background: rgba(0, 0, 0, 0.4);
+      font-size: 28rpx;
+      color: #fff;
+      line-height: 60rpx;
+      text-indent: 35rpx;
+    }
+  }
+  .txtbox {
+    position: relative;
+    padding: 0 40rpx;
+    .groh2 {
+      font-size: 36rpx;
+      color: #333;
+      line-height: 60rpx;
+      margin-top: 20rpx;
+    }
+    .grop {
+      font-size: 28rpx;
+      line-height: 66rpx;
+      border-bottom: 1px solid #d2d2d2;
+      color: #888;
+    }
+    .red{
+      color: @red;
+    }
+    .grospan{
+      color: #353535
+    }
+    .small{
+      font-size: 24rpx;
+      color: #888;
+    }
+  }
+  .xingcheng {
+    position: relative;
+    padding: 0 40rpx;
+    .xchtxt {
+      margin-left: 10rpx;
+      font-size: 24rpx;
+      color: #888;
+      line-height: 50rpx;
+      display: flex;
+      flex-direction: row;
+      .timeico {
+        width: 25rpx;
+        height: 25rpx;
+        // background: url(../assets/img/tuantimeico.png) no-repeat center;
+        // background-size: 100% 100%;
+        margin: 12rpx 15rpx 0 2rpx;
+      }
+      .placeico {
+        width: 30rpx;
+        height: 30rpx;
+        // background: url(../assets/img/tuanplaceico.png) no-repeat center;
+        // background-size: 100% 100%;
+        margin: 8rpx 12rpx 0 0;
+      }
+    }
+    .groupul {
+      position: relative;
+      width: 100%;
+      // overflow: visible;
+      border-left: 1px solid #a0a0a0;      
+      margin-bottom: 50rpx;
+      margin-top: 20rpx;
+      .groupli {
+        position: relative;
+        margin-bottom: 100rpx;
+        .redcli {
+          position: absolute;
+          top: 10rpx;
+          left: -6rpx;
+          width: 10rpx;
+          height: 10rpx;
+          background: @red;
+          border-radius: 50%;
+        }
+        .tuandiv {
+          margin-left: 15rpx;
+          display: flex;
+          flex-direction: row;
+          .img {
+            width: 230rpx;
+            height: 140rpx;
+            overflow: hidden;
+            .groimg{
+              width: 100%;
+            }
+          }
+          .bomtxtbox {
+            margin-left: 30rpx;
+            color: #333;
+            .title {
+              font-size: 32rpx;
+              line-height: 50rpx;
+            }
+            .price {
+              font-size: 28rpx;
+              line-height: 60rpx;
+              .red {
+                color: @red;
+                font-size: 32rpx;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  view{
+    overflow: visible;
+  }
+  .lijibm {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85rpx;
+    background: @red;
+    line-height: 85rpx;
+    font-size: 32rpx;
+    color: #fff;
+    text-align: center;
+  }
+}
