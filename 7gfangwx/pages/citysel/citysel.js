@@ -5,6 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    area_id: "",
+    nowurl: "",
+    nowplace: "",
+    nowcity: "",
+    areadata: {},
+    hotcityList: [],
+    allcityList: []
 
   },
 
@@ -12,16 +19,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: "https://www.easy-mock.com/mock/5dc68b9765dec35bd6e85f86/area",
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: (res) => {
+        console.log(res.data.data);
+        this.setData({
+          hotcityList: res.data.data.topAreaList,
+          allcityList: res.data.data.areaList
+        })
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx: request({
-      url: "https://www.easy-mock.com/mock/5dc68b9765dec35bd6e85f86/area"
-    })
+
   },
 
   /**

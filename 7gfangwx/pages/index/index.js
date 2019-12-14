@@ -42,8 +42,8 @@ Page({
   },
 
   data: {
-    nowplace: "全国",
-    nowurl: "",
+    nowplace: "北京",
+    nowurl: getApp().globalData.position.url,
     searchword: "",
     isseplace: false,
     newsList: [{
@@ -311,6 +311,16 @@ Page({
 
   },
   onLoad: function () {
+    console.log(this.data.nowurl);
+    getApp().globalData.position = {
+      id: 3,
+      url: "langfang"
+    }
+    this.setData({
+      nowurl: getApp().globalData.position.url
+    })
+    console.log(this.data.nowurl);
+
     this.setData({
       newsTop: this.data.newsList.splice(0, 1)[0]
     })

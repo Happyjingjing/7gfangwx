@@ -8,7 +8,7 @@ Component({
     isseplace: Boolean,
     nowplace: {
       type: String,
-      default: "全国"
+      default: "北京"
     }
   },
 

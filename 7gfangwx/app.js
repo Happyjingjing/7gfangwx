@@ -50,6 +50,11 @@ App({
     })
   },
   globalData: {
+    position: {
+      id: 4,
+      url: "beijing"
+    },
+
     share: false, // 分享默认为false
     height: 0,
     userInfo: null

@@ -32,8 +32,8 @@
           <view class="citytip textindent">{{ item.name }}</view>
           <view class="allul">
             <view class="allli" wx:for="{{item.list}}"
-              wx:for-item="{{tem}}"
-              wx:for-index="{{idx}}"
+              wx:for-item="tem"
+              wx:for-index="idx"
               wx:key="{{idx}}"
               bindtap="ulsel" >
             <!-- (tem.name, tem.url, tem.id, tem.is_kaitong) -->
