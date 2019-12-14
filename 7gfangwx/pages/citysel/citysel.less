@@ -1,0 +1,73 @@
+@red: #ff222c;
+@blue: #1fa2ff;
+.citysel {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #f6f6f6;
+  overflow: hidden;
+  // margin-top: 0.9rpx;
+  .cenbox {
+    margin: 14rpx 38rpx;
+    .citytip {
+      font-size: 22rpx;
+      color: #666;
+      line-height: 60rpx;
+    }
+    .textindent {
+      text-indent: 20rpx;
+    }
+    .hotcity {
+      .cityhotul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .cityhotul:after {
+        content: "";
+        width: 210rpx;
+      }
+    }
+    .cityhot {
+      display: block;
+      width: 210rpx;
+      height: 60rpx;
+      font-size: 24rpx;
+      color: #333;
+      line-height: 60rpx;
+      margin: 0 0 10rpx 0;
+      background: #fff;
+      border-radius: 5rpx;
+      text-align: center;
+    }
+    .nowcity {
+      margin-top: 30rpx;
+    }
+    .hotcity {
+      margin-top: 30rpx;
+    }
+    .allcity {
+      position: relative;
+      width: 100%;
+      margin-top: 30rpx;
+      .allul {
+        position: relative;
+        background: #fff;
+        border-radius: 5rpx;
+        .allli {
+          position: relative;
+          height: 60rpx;
+          font-size: 24rpx;
+          color: #333;
+          line-height: 60rpx;
+          margin: 0 14rpx;
+          text-indent: 14rpx;
+          border-bottom: 1px solid #eee;
+          &:nth-last-child(1) {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

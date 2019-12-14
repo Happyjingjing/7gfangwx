@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <tem-search searchword="searchword" isseplace="isseplace" />
+  <tem-search searchword="searchword" isseplace="{{isseplace}}" nowplace="{{nowplace}}" />
 
   <view class="banner">
     <swiper class="bannersw" indicator-dots="true" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ff222c" autoplay="true" interval="5000" circular="true" >
@@ -101,7 +101,7 @@
       {{ nomore ? "没有更多了" : "正在加载..." }}
     </view>
   </view>
-
+ 
   <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>

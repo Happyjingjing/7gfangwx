@@ -333,17 +333,14 @@
     }
     .shapanbox {
       position: relative;
-      width: 6.7rpx;
-      margin: 0 auto;
-      padding: 0 0.2rpx;
-      margin-top: 0.2rpx;
+      width: 100%;
+      margin-top: 20rpx;
       background: #fff;
-      border-radius: 0.1rpx;
-      padding-bottom: 0.2rpx;
+      padding-bottom: 30rpx;
       .shapbd {
-        position: relative;
-        width: 100%;
-        height: 4.5rpx;
+        position: relative;        
+        margin: 20rpx 30rpx 0;
+        height: 400rpx;
         overflow: hidden;
         .content {
           position: absolute;
@@ -351,36 +348,32 @@
           left: -100px;
           width: 900px;
           height: 600px;
+          overflow: hidden;
+          .shapanimg{
+            position: relative;
+            width: 100%;
+            height: 100%;
+          }
           .lppage {
             position: absolute;
             top: 0;
             left: 0;
             width: 900px;
             height: 600px;
-            li {
+            .wxli {
               position: absolute;
               top: 0;
               left: 0;
-              padding: 0 0.18rpx;
-              font-size: 0.24rpx;
-              line-height: 0.42rpx;
+              padding: 0 18rpx;
+              font-size: 24rpx;
+              line-height: 42rpx;
               color: #fff;
               background: @blue;
             }
           }
         }
       }
-      .shapanmore {
-        position: relative;
-        width: 100%;
-        height: 0.8rpx;
-        background: #eee;
-        color: @blue;
-        font-size: 0.28rpx;
-        line-height: 0.8rpx;
-        text-align: center;
-        margin-top: 0.16rpx;
-      }
+      
     }
     
     .dianpingbox {

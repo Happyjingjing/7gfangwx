@@ -1,0 +1,42 @@
+<!--pages/shapan/shapan.wxml-->
+<view class="shapan">
+  <view class="stage" style="height:{{stageH}}px">
+    <scroll-view class="content" scroll-y="{{true}}" scroll-x="{{true}}" scroll-top="{{contenttop}}" scroll-left="{{contentleft}}"> 
+      <image mode="widthFix" class="shapanimg" src="{{shapanimg}}" alt="" />
+      <view class="lppage">
+        <view
+          class="swbullet {{currentidx == index ? 'on' : ''}}"
+          wx:for="{{pointdata}}"
+          wx:key="{{item.id}}"
+          style="top:{{ item.y }}px ; left: {{item.x}}px"
+          data-index="{{index}}"
+          bindtap="swbullettap"
+          >
+          {{ item.name }}
+        </view>
+      </view>
+      <!-- <view class="swiper-pagination lppage"></view> -->
+    </scroll-view>
+  </view>
+  <swiper class="swiper-container lpsw" current="{{currentidx}}" bindchange="swiperchange">
+    <swiper-item
+      class="swiper-slide"
+      wx:for="{{pointdata}}"
+      wx:key="{{item.id}}"
+    >
+      <view class="lphouse">
+        <view class="wxh1">{{ item.name }}</view>
+        <view class="lpqi">
+          <view class="wxp">近期开盘：2019-09-28</view>
+          <view class="wxp">近期交房：2019-09-28</view>
+        </view>
+      </view>
+      <view class="lpinfo">
+        <view class="wxli">单元: {{ item.elevator_num }}个</view>
+        <view class="wxli">电梯数：{{ item.elevator_num }}</view>
+        <view class="wxli">层数: {{ item.floor_num }}层</view>
+        <view class="wxli">户数：{{ item.households_num }}户</view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

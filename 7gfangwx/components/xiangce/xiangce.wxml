@@ -1,5 +1,5 @@
 <!--components/xiangce/xiangce.wxml-->
-<view class="xiangcetan">
+  <view class="xiangcetan">
     <swiper class="swiper-container xiangcesw" current="{{currentidx}}" bindchange="swiperchange">
       <swiper-item class="swiper-slide"
                     wx:for="{{xiangceList}}"

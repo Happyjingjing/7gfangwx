@@ -2,7 +2,7 @@
   <view class="search">
     <view class="searchbox {{isseplace ? 'isseplace':''}}">
       <view class="place">
-        <text>廊坊</text>
+        <text bindtap="citysel">{{nowplace}}</text>
       </view>
       <view class="searchbd">
         <view class="sespan">

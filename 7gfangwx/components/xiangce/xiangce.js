@@ -14,7 +14,7 @@ Component({
   data: {
     currentidx: 2
   },
-  observers: {
+  observers: { //观察者：属性监听
     'idx' (idx) {
       this.setData({
         currentidx: idx

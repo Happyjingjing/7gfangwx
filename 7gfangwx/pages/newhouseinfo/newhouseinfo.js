@@ -229,6 +229,42 @@ Page({
     isinfotan: false,
     url: "",
 
+    pointdata: [{
+      "id": 10,
+      "l_id": 595695,
+      "name": "1#",
+      "elevator_num": 2,
+      "floor_num": 22,
+      "households_num": 100,
+      "left_x": "160",
+      "top_y": "325",
+      "floor_type": "高层",
+      "la_id": "595720,595721,595722",
+      "unit_num": 5,
+      "deliver_date": "2018年",
+      "start_date": "2017-06-17",
+      "x": "160",
+      "y": "325"
+    }, {
+      "id": 11,
+      "l_id": 595695,
+      "name": "2#",
+      "elevator_num": 6,
+      "floor_num": 35,
+      "households_num": 215,
+      "left_x": "174",
+      "top_y": "377",
+      "floor_type": "高层",
+      "la_id": "595722,595723",
+      "unit_num": 4,
+      "deliver_date": "2018年",
+      "start_date": "2017-06-17",
+      "x": "174",
+      "y": "377"
+    }],
+    poscenxy: [337, 350],
+    shapanimg: "http://langfang.6gfang.com/upload/admin/20191104/b28733217ba421c72939f445b3de8a2f.jpg"
+
   },
 
   picxiangce: function () {
@@ -260,6 +296,12 @@ Page({
     let lid = e.currentTarget.dataset.lid;
     wx.navigateTo({
       url: "../newhousemoreinfo/newhousemoreinfo?lid=" + lid
+    })
+  },
+  shapan: function (e) {
+    let lid = e.currentTarget.dataset.lid;
+    wx.navigateTo({
+      url: "../shapan/shapan?lid=" + lid
     })
   },
   tiptan: function (e) {

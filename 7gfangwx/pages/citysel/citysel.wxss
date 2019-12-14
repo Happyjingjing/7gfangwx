@@ -1,0 +1,68 @@
+.citysel {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #f6f6f6;
+  overflow: hidden;
+}
+.citysel .cenbox {
+  margin: 14rpx 38rpx;
+}
+.citysel .cenbox .citytip {
+  font-size: 22rpx;
+  color: #666;
+  line-height: 60rpx;
+}
+.citysel .cenbox .textindent {
+  text-indent: 20rpx;
+}
+.citysel .cenbox .hotcity .cityhotul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.citysel .cenbox .hotcity .cityhotul:after {
+  content: "";
+  width: 210rpx;
+}
+.citysel .cenbox .cityhot {
+  display: block;
+  width: 210rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  color: #333;
+  line-height: 60rpx;
+  margin: 0 0 10rpx 0;
+  background: #fff;
+  border-radius: 5rpx;
+  text-align: center;
+}
+.citysel .cenbox .nowcity {
+  margin-top: 30rpx;
+}
+.citysel .cenbox .hotcity {
+  margin-top: 30rpx;
+}
+.citysel .cenbox .allcity {
+  position: relative;
+  width: 100%;
+  margin-top: 30rpx;
+}
+.citysel .cenbox .allcity .allul {
+  position: relative;
+  background: #fff;
+  border-radius: 5rpx;
+}
+.citysel .cenbox .allcity .allul .allli {
+  position: relative;
+  height: 60rpx;
+  font-size: 24rpx;
+  color: #333;
+  line-height: 60rpx;
+  margin: 0 14rpx;
+  text-indent: 14rpx;
+  border-bottom: 1px solid #eee;
+}
+.citysel .cenbox .allcity .allul .allli:nth-last-child(1) {
+  border-bottom: 0;
+}

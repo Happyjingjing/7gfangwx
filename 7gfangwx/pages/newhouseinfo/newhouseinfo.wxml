@@ -139,6 +139,32 @@
       
     </view>
 
+    <view class="shapanbox" 
+          data-lid="{{lid}}"
+          wx:if="{{pointdata.length != 0}}" bindtap="shapan">
+      <view class="titleh2">
+        <view class="tittxt">
+          楼栋信息
+        </view>
+        <view class="morebox">全部楼栋
+          <image mode="widthFix" class="moreimg" src="../../images/moreimg.png" />
+        </view>
+      </view>
+      <view class="shapbd">
+        <view class="content">
+          <image mode="widthFix" class="shapanimg" src="{{shapanimg}}" alt="" />
+          <view class="lppage">
+            <view class="wxli"
+              wx:for="{{pointdata}}"
+              wx::key="{{item.id}}"
+              style="top:{{ item.y }}px ; left: {{item.x}}px" >
+              {{ item.name }}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
     <view class="dianpingbox">
       <view class="titleh2" bindtap="pinglun">
         <view class="tittxt">

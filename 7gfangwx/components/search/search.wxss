@@ -30,6 +30,7 @@
 .search .searchbox .searchbd .sespan {
   display: block;
   height: 24rpx;
+  overflow: hidden;
   margin-top: 22rpx;
   margin-left: 10rpx;
   border-left: 1px solid #b2b2b2;

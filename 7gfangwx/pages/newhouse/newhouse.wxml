@@ -1,6 +1,6 @@
 <!--pages/newhouse/newhouse.wxml-->
 <view class="container">
-  <tem-search searchword="searchword" isseplace="isseplace" />
+  <tem-search searchword="searchword" isseplace="{{isseplace}}" />
 
   <view
       class="searchsubbox {{isFixed ? 'fixedBar':''}} {{ istopfix ? 'navtopfix':''}}"

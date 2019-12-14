@@ -1,0 +1,46 @@
+<!--pages/citysel/citysel.wxml-->
+  <view class="citysel">
+    <view class="cenbox">
+      <view class="nowcity">
+        <view class="citytip">定位城市</view>
+        <view class="wxspan"
+              bindtap="index"
+              class="cityhot"
+          >{{ nowplace }}
+        </view>
+      </view>
+      <!-- @click="ulsel(index, item.id)" -->
+      <view class="hotcity">
+        <view class="citytip">热门城市</view>
+        <view class="cityhotul">
+          <view class="cityhot"
+            wx:for="{{hotcityList}}"
+            wx:key="{{index}}"
+            bindtap="ulsel" >
+          <!-- (item.name, item.url, item.id, 1) -->
+            {{ item.name }}
+          </view>
+        </view>
+      </view>
+      <view class="allcity">
+        <view class="citytip">全国城市</view>
+        <view
+          class="allcitybox"
+          wx:for="{{allcityList}}"
+          wx:key="{{index}}"
+        >
+          <view class="citytip textindent">{{ item.name }}</view>
+          <view class="allul">
+            <view class="allli" wx:for="{{item.list}}"
+              wx:for-item="{{tem}}"
+              wx:for-index="{{idx}}"
+              wx:key="{{idx}}"
+              bindtap="ulsel" >
+            <!-- (tem.name, tem.url, tem.id, tem.is_kaitong) -->
+              {{ tem.name }}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>

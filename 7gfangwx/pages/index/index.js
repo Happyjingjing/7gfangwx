@@ -42,6 +42,7 @@ Page({
   },
 
   data: {
+    nowplace: "全国",
     nowurl: "",
     searchword: "",
     isseplace: false,
@@ -154,6 +155,98 @@ Page({
     wx.navigateTo({
       url: '../video/video'
     })
+  },
+
+  getUserLocation: function () {
+    wx.getSetting({
+      success: (res) => {
+        // console.log(JSON.stringify(res))
+        // console.log(res.authSetting['scope.userLocation']);
+        // res.authSetting['scope.userLocation'] == undefined    表示 初始化进入该页面
+        // res.authSetting['scope.userLocation'] == false    表示 非初始化进入该页面,且未授权
+        // res.authSetting['scope.userLocation'] == true    表示 地理位置授权
+        if (res.authSetting['scope.userLocation'] != undefined && res.authSetting['scope.userLocation'] != true) {
+          wx.showModal({
+            title: '请求授权当前位置',
+            content: '喜欢房需要获取您的地理位置，请确认授权',
+            success: function (res) {
+              if (res.cancel) {
+                wx.showToast({
+                  title: '拒绝授权',
+                  icon: 'none',
+                  duration: 1000
+                })
+              } else if (res.confirm) {
+                wx.openSetting({
+                  success: function (dataAu) {
+                    if (dataAu.authSetting["scope.userLocation"] == true) {
+                      wx.showToast({
+                        title: '授权成功',
+                        icon: 'success',
+                        duration: 1000
+                      })
+                      //再次授权，调用wx.getLocation的API
+                    } else {
+                      wx.showToast({
+                        title: '授权失败',
+                        icon: 'none',
+                        duration: 1000
+                      })
+                    }
+                  }
+                })
+              }
+            }
+          })
+        } else if (res.authSetting['scope.userLocation'] == undefined) {
+          //调用wx.getLocation的API
+          this.getLocation();
+        } else {
+          //调用wx.getLocation的API
+          this.getLocation();
+        }
+      }
+    })
+  },
+  getLocation: function () {
+    // 微信获得经纬度
+    // var _this = this;
+    wx.getLocation({
+      type: 'gcj02', //gcj02 // wgs84
+      success: (res) => {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        var speed = res.speed
+        var accuracy = res.accuracy
+        wx.request({
+          // url: 'http://api.map.baidu.com/geocoder/v2/?ak=rOo9NssC3FcUv9BsbHyumdv0sQYsiMnb&location=' + res.latitude + ',' + res.longitude + '&output=json',
+          url: 'http://api.map.baidu.com/reverse_geocoding/v3/?ak=sHZTomd7grslfP7sPKB8tRgT49FK9TEu&output=json&coordtype=gcj02&location=' + res.latitude + ',' + res.longitude,
+          data: {},
+          header: {
+            'Content-Type': 'application/json'
+          },
+          success: (ops) => {
+            // console.log(ops)
+            // console.log('定位城市：', ops.data.result.addressComponent.city);
+            this.setData({
+              nowplace: ops.data.result.addressComponent.city
+            })
+          },
+          fail: (resq) => {
+            wx.showModal({
+              title: '信息提示',
+              content: '请求失败',
+              showCancel: false,
+              confirmColor: '#f37938'
+            });
+          },
+          complete: function () {}
+        })
+      }
+    })
+  },
+  onShow: function () {
+    this.getUserLocation();
   },
   //事件处理函数
   // bindViewTap: function() {

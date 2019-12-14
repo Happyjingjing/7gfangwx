@@ -5,7 +5,11 @@ Component({
    */
   properties: {
     searchword: String,
-    isseplace: Boolean
+    isseplace: Boolean,
+    nowplace: {
+      type: String,
+      default: "全国"
+    }
   },
 
   /**
@@ -18,7 +22,15 @@ Component({
   /**
    * 组件的方法列表
    */
+  onload: function () {
+    console.log(this.data.isseplace);
+  },
   methods: {
+    citysel: function () {
+      wx.navigateTo({
+        url: "../../pages/citysel/citysel"
+      })
+    }
+  },
 
-  }
 })

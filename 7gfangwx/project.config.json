@@ -4,17 +4,25 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"coverView": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.3",
-	"appid": "wxb68b7f750b5053b3",
+	"appid": "wx5108b2339b253a9a",
 	"projectname": "7gfangwx",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -40,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 14,
 			"list": [
 				{
 					"id": -1,
@@ -123,6 +131,27 @@
 					"id": -1,
 					"name": "pages/pingluntap/pingluntap",
 					"pathName": "pages/pingluntap/pingluntap",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/newhousemoreinfo/newhousemoreinfo",
+					"pathName": "pages/newhousemoreinfo/newhousemoreinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shapan/shapan",
+					"pathName": "pages/shapan/shapan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/citysel/citysel",
+					"pathName": "pages/citysel/citysel",
 					"scene": null
 				}
 			]

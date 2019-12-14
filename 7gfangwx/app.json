@@ -1,5 +1,5 @@
 {
-  "pages": [    
+  "pages": [
     "pages/index/index",
     "pages/fangliao/fangliao",
     "pages/mypage/mypage",
@@ -19,9 +19,16 @@
     "pages/pinglun/pinglun",
     "pages/pingluntap/pingluntap",
     "pages/lpdongtai/lpdongtai",
+    "pages/shapan/shapan",
+    "pages/citysel/citysel",
     "pages/fwxy/fwxy",
     "pages/logs/logs"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "喜欢房需要获取您的地理位置，请确认授权"
+    }
+  },
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ff222c",

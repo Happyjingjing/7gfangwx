@@ -1,35 +1,32 @@
 <!--pages/newhousemoreinfo/newhousemoreinfo.wxml-->
-<div class="housemoreinfo">
-    <menulist :ismenutop="false" />
-    <div class="jibeninfo">
-      <h2 class="titleh2">基本信息</h2>
-      <p>
-        价 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：
-        <span>{{ loupaninfo.price }}</span>
-      </p>
-      <p>物业类型：{{ loupaninfo.cp_titcle }}</p>
-      <p>
+<view class="housemoreinfo">
+    <view class="jibeninfo">
+      <view class="titleh2">基本信息</view>
+      <view class="wxp">
+        价 格： {{ loupaninfo.price }}
+      </view>
+      <view class="wxp">物业类型：{{ loupaninfo.cp_titcle }}</view>
+      <view class="wxp">
         项目特色：
-        <span v-for="(item, index) in loupaninfo.title_liked" :key="index"
-          >{{ item.title
-          }}{{ index == loupaninfo.title_liked.length - 1 ? "" : "，" }}
-        </span>
-      </p>
-      <p>装修状况：{{ loupaninfo.renovation_status_val }}</p>
-      <p>产权年限：{{ loupaninfo.property_right_val }}</p>
-      <p>开 发 商&nbsp;&nbsp;：{{ loupaninfo.developers }}</p>
-      <p>楼盘地址：{{ loupaninfo.address }}</p>
-    </div>
-    <div class="infobox">
-      <h2 class="titleh2">交通信息</h2>
-      <div v-html="loupaninfo.transport_line"></div>
-    </div>
-    <div class="infobox">
-      <h2 class="titleh2">周边配套</h2>
-      <div v-html="loupaninfo.lppeitao"></div>
-    </div>
-    <div class="infobox" v-if="loupaninfo.excerpt">
-      <h2 class="titleh2">项目简介</h2>
-      <div v-html="loupaninfo.excerpt"></div>
-    </div>
-  </div>
+        <block wx:for="{{loupaninfo.title_liked}}" wx:key="{{index}}">
+          {{ item.title }}{{ index == loupaninfo.title_liked.length - 1 ? "" : "，" }}
+        </block>
+      </view>
+      <view class="wxp">装修状况：{{ loupaninfo.renovation_status_val ? loupaninfo.renovation_status_val :'暂无信息' }}</view>
+      <view class="wxp">产权年限：{{ loupaninfo.property_right_val ? loupaninfo.property_right_val :'暂无信息'  }}</view>
+      <view class="wxp">开 发 商 ：{{ loupaninfo.developers ? loupaninfo.developers :'暂无信息'  }}</view>
+      <view class="wxp">楼盘地址：{{ loupaninfo.address  ? loupaninfo.address :'暂无信息' }}</view>
+    </view>
+    <view class="infobox" wx:if="{{loupaninfo.transport_line}}">
+      <view class="titleh2">交通信息</view>
+      <rich-text nodes="{{loupaninfo.transport_line}}"></rich-text>
+    </view>
+    <view class="infobox" wx:if="{{loupaninfo.lppeitao}}">
+      <view class="titleh2">周边配套</view>
+      <rich-text nodes="{{loupaninfo.lppeitao}}"></rich-text>
+    </view>
+    <view class="infobox" wx:if="{{loupaninfo.excerpt}}">
+      <view class="titleh2">项目简介</view>
+      <rich-text nodes="{{loupaninfo.excerpt}}"></rich-text>
+    </view>
+  </view>
